@@ -1,0 +1,364 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body with Gradient Background */
+body {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Navigation Bar with Gradient */
+nav {
+    background: linear-gradient(to right, #ff6b6b, #feca57);
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #1e90ff;
+    transform: scale(1.1);
+}
+
+/* Container with Glassmorphism Effect */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #2d3436;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #ff4757, #1e90ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+th {
+    background: linear-gradient(to right, #6c5ce7, #a29bfe);
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: #f0f3ff;
+    transition: background-color 0.3s ease;
+}
+
+/* Action Links with Colorful Buttons */
+.actions a {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 25px;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actions a.view {
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: #fff;
+}
+
+.actions a.edit {
+    background: linear-gradient(to right, #f1c40f, #f39c12);
+    color: #fff;
+}
+
+.actions a.delete {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: #fff;
+}
+
+.actions a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Messages with Animation */
+.messages {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.messages.success {
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: #fff;
+}
+
+.messages.error {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Form Styles */
+.student-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.student-form p {
+    margin-bottom: 20px;
+}
+
+.student-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2d3436;
+}
+
+.student-form input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.student-form input:focus {
+    border-color: #1e90ff;
+    outline: none;
+}
+
+.student-form button {
+    background: linear-gradient(to right, #ff6b6b, #feca57);
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Student Detail Page */
+.student-detail {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.student-detail p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #2d3436;
+}
+
+/* Delete Confirmation Page */
+.delete-form {
+    text-align: center;
+    padding: 20px;
+}
+
+.delete-form button {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.delete-form button:hover {
+    transform: translateY(-3px);
+}
+
+.delete-form a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.delete-form a:hover {
+    text-decoration: underline;
+}
+
+/* All Students Table Header */
+table:nth-child(1) th {
+    background: linear-gradient(to right, #6c5ce7, #a29bfe);
+}
+
+/* CSE Students Table Header */
+table:nth-child(2) th {
+    background: linear-gradient(to right, #6c5ce7, #81ecec);
+}
+
+/* EEE Students Table Header */
+table:nth-child(3) th {
+    background: linear-gradient(to right, #ff7f50, #ff6b6b);
+}
+
+/* Civil Students Table Header */
+table:nth-child(4) th {
+    background: linear-gradient(to right, #00cec9, #81ecec);
+}
+
+/* ME Students Table Header */
+table:nth-child(5) th {
+    background: linear-gradient(to right, #ff4757, #feca57);
+}
+/* Search Form Styles */
+.search-form {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-form input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-form input:focus {
+    border-color: #1e90ff;
+    outline: none;
+}
+
+.search-form button {
+    background: linear-gradient(to right, #ff6b6b, #feca57);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Actions কলামের জন্য */
+.actions {
+    text-align: center; /* বোতামগুলো কেন্দ্রে রাখতে */
+}
+
+/* Delete এবং Edit বোতামের স্টাইলিং */
+.delete-btn, .edit-btn {
+    display: inline-block; /* বোতামগুলো একই লাইনে রাখতে */
+    margin: 0 5px; /* বোতামের মাঝে সামান্য স্পেস */
+    padding: 8px 15px; /* বোতামের প্যাডিং */
+    border: none;
+    border-radius: 20px; /* গোলাকার কর্নার */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Delete বোতামের জন্য নির্দিষ্ট স্টাইলিং */
+.delete-btn {
+    background: linear-gradient(to right, #e74c3c, #c0392b); /* আপনার দেওয়া গ্রেডিয়েন্ট */
+    color: #fff;
+}
+
+/* Edit বোতামের জন্য নির্দিষ্ট স্টাইলিং */
+.edit-btn {
+    background: linear-gradient(to right, #f1c40f, #e67e22); /* Edit বোতামের জন্য একটি গ্রেডিয়েন্ট */
+    color: #fff;
+}
+
+/* হোভার ইফেক্ট */
+.delete-btn:hover, .edit-btn:hover {
+    transform: translateY(-3px); /* আপনার দেওয়া হোভার ইফেক্ট */
+}
+
+/* টেবিলের কোষগুলোর জন্য */
+td {
+    vertical-align: middle; /* কোষের কনটেন্ট মাঝে সারিবদ্ধ করতে */
+    padding: 8px; /* কোষের প্যাডিং */
+}
+
+
+
+

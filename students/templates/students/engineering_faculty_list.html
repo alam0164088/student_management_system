@@ -1,0 +1,177 @@
+{% extends 'students/base.html' %}
+{% block content %}
+    <h1>Engineering Faculty Student List (GUST)</h1>
+
+    <!-- Search Form -->
+    <form method="GET" action="{% url 'engineering_faculty_list' %}" class="search-form">
+        <input type="text" name="q" value="{{ query }}" placeholder="Search by name, email, or department...">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- All Students Table -->
+    <h2>All Students</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Course</th>
+                <th>Department</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in all_students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.phone }}</td>
+                <td>{{ student.course }}</td>
+                <td>{{ student.department }}</td>
+                <td class="actions">
+                    <a href="{% url 'student_detail' student.pk %}" class="view">View</a>
+                    <a href="{% url 'student_edit' student.pk %}" class="edit">Edit</a>
+                    <a href="{% url 'student_delete' student.pk %}" class="delete">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No students found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- CSE Students Table -->
+    <h2>CSE Students</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in cse_students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.phone }}</td>
+                <td>{{ student.course }}</td>
+                <td class="actions">
+                    <a href="{% url 'student_detail' student.pk %}" class="view">View</a>
+                    <a href="{% url 'student_edit' student.pk %}" class="edit">Edit</a>
+                    <a href="{% url 'student_delete' student.pk %}" class="delete">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No CSE students found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- EEE Students Table -->
+    <h2>EEE Students</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in eee_students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.phone }}</td>
+                <td>{{ student.course }}</td>
+                <td class="actions">
+                    <a href="{% url 'student_detail' student.pk %}" class="view">View</a>
+                    <a href="{% url 'student_edit' student.pk %}" class="edit">Edit</a>
+                    <a href="{% url 'student_delete' student.pk %}" class="delete">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No EEE students found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Civil Students Table -->
+    <h2>Civil Students</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in civil_students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.phone }}</td>
+                <td>{{ student.course }}</td>
+                <td class="actions">
+                    <a href="{% url 'student_detail' student.pk %}" class="view">View</a>
+                    <a href="{% url 'student_edit' student.pk %}" class="edit">Edit</a>
+                    <a href="{% url 'student_delete' student.pk %}" class="delete">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No Civil students found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- ME Students Table -->
+    <h2>ME Students</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in me_students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.phone }}</td>
+                <td>{{ student.course }}</td>
+                <td class="actions">
+                    <a href="{% url 'student_detail' student.pk %}" class="view">View</a>
+                    <a href="{% url 'student_edit' student.pk %}" class="edit">Edit</a>
+                    <a href="{% url 'student_delete' student.pk %}" class="delete">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No ME students found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
