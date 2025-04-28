@@ -5,9 +5,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-op372_odn)h=955=8)0hdda6^zfycxg0a&isk1bn15ytqsn#0%'
 
-DEBUG = True
+DEBUG = False  # Production এ False রাখো
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'student-management-system-6p1f.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
