@@ -3,17 +3,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Management System</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
 </head>
 <body>
-    <nav>
-        <a href="{% url 'student_list' %}">Home</a> |
-        <a href="{% url 'student_add' %}">Add Student</a> |
-        <a href="{% url 'student_subject_list' %}">Student & Subject List</a> |
-        <a href="{% url 'engineering_faculty_list' %}">Engineering Faculty</a>
+    <nav class="navbar">
+        <a href="{% url 'student_list' %}" class="logo">GUST Student System</a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="{% url 'student_list' %}" class="nav-link">Home</a>
+            <a href="{% url 'student_add' %}" class="nav-link">Add Student</a>
+            <a href="{% url 'student_subject_list' %}" class="nav-link">Student & Subject List</a>
+            <a href="{% url 'engineering_faculty_list' %}" class="nav-link">Engineering Faculty</a>
+        </div>
     </nav>
     <div class="container">
         {% if messages %}
@@ -23,5 +32,15 @@
         {% endif %}
         {% block content %}{% endblock %}
     </div>
+    <script>
+        // Toggle mobile menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

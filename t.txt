@@ -1,0 +1,33 @@
+sms_project/                      # Root project directory
+│
+├── manage.py                     # Django's main entry point for management commands
+├── requirements.txt              # Project dependencies (e.g., Django, other packages)
+├── .gitignore                    # Files/folders to be ignored by Git (e.g., venv)
+├── db.sqlite3                    # SQLite database (if you're using SQLite as DB)
+│
+├── students/                     # Your Django app (could be a student management system)
+│   ├── migrations/               # Django migration files
+│   ├── __init__.py
+│   ├── admin.py                  # Django admin configuration
+│   ├── apps.py                   # App configuration
+│   ├── models.py                 # App's database models
+│   ├── tests.py                  # Unit tests for the app
+│   ├── views.py                  # Views (logic) for the app
+│   └── templates/                # Directory for HTML templates
+│       └── students/             # Templates specific to the students app
+│           ├── base.html         # Base template for the student-related pages
+│           ├── engineering_faculty_list.html  # Page to show engineering faculty list
+│           ├── student_confirm_delete.html  # Confirmation page for student deletion
+│           ├── student_detail.html          # Page to show student details
+│           ├── student_form.html            # Form for adding/editing student details
+│           ├── student_list.html            # Page to list all students
+│           └── student_subject_list.html    # Page to show list of subjects for the student
+│
+├── venv/                         # Virtual environment directory (may be ignored in Git)
+│   ├── bin/                      # Executable files for virtual environment
+│   ├── lib/                      # Libraries and packages installed in the environment
+│   └── include/                  # Headers for libraries (usually not directly used in Django)
+│
+└── static/                       # Static files (CSS, JS, Images)
+    └── css/                       # Your custom stylesheets
+        └── style.css              # Example of a CSS file
